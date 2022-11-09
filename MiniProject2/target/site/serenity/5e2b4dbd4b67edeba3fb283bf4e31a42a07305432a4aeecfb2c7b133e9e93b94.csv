@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Get Products","Get all products","SUCCESS","2022-11-09T12:05:25.2199586+07:00[Asia/Bangkok]","0.0","7.91"
+"Get Products","Get product ratings","SUCCESS","2022-11-09T12:05:33.1360916+07:00[Asia/Bangkok]","0.0","1.35"
+"Get Products","Get product comments","SUCCESS","2022-11-09T12:05:34.4934496+07:00[Asia/Bangkok]","0.0","1.48"

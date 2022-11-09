@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Check added products","Check a product","SUCCESS","2022-11-09T12:44:08.2231693+07:00[Asia/Bangkok]","0.0","23.04"
+"Login","Login with email and password","SUCCESS","2022-11-09T12:44:31.5624788+07:00[Asia/Bangkok]","0.0","66.95"
+"Logout","Logout acccount","SUCCESS","2022-11-09T12:45:38.5181045+07:00[Asia/Bangkok]","0.0","6.38"
+"Register","Register new account","SUCCESS","2022-11-09T12:45:45.0918492+07:00[Asia/Bangkok]","0.0","57.86"
+"Search","Search product","SUCCESS","2022-11-09T12:46:42.9648972+07:00[Asia/Bangkok]","0.0","15.88"

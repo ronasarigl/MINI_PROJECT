@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Add Product","Add product to cart","SUCCESS","2022-11-09T19:13:50.5771705+07:00[Asia/Bangkok]","0.0","48.26"
+"Add Product","Add second product to cart","SUCCESS","2022-11-09T19:14:38.8782941+07:00[Asia/Bangkok]","0.0","34.29"
+"Adding Numbers","Adding two numbers","SUCCESS","2022-11-09T19:15:13.2937399+07:00[Asia/Bangkok]","0.0","20.84"
+"Login","Login with email and password","SUCCESS","2022-11-09T19:15:34.1946696+07:00[Asia/Bangkok]","0.0","199.21"
+"Logout","Logout account","SUCCESS","2022-11-09T19:18:53.4117361+07:00[Asia/Bangkok]","0.0","29.22"
+"Register","Register new account","SUCCESS","2022-11-09T19:19:22.6414258+07:00[Asia/Bangkok]","0.0","225.04"

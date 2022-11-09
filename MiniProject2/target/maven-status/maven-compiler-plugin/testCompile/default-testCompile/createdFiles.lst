@@ -1,0 +1,11 @@
+starter\stepdefinitions\LoginStep.class
+starter\Products\GetProduct.class
+starter\stepdefinitions\ProductStep.class
+starter\stepdefinitions\HelloStep.class
+starter\Authentication\User.class
+starter\CucumberTestSuite.class
+starter\stepdefinitions\UserStep.class
+starter\Products\CreateProduct.class
+starter\Hello\HelloGet.class
+starter\Authentication\Login.class
+starter\stepdefinitions\CreateProductStep.class

@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="736b1aa347ad0cc02b60562823f1ec2654d77d4dedca53e5400dc635edd55b88.html">Register</a></span>
+                > <span class="truncate-60"><a
+                    href="730c55be46ee6dbc06669609a9ceca36d62b24d4118f25be84b677b4f623b99e.html">Register new account </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-11-2022 12:45</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Register </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user<br />
+I want to register my account<br />
+SO I can login with my account
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Register new account
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on home page<br>And I click icon the login icon<br>And I click register text<br>When I input "&lt;name&gt;" name<br>And I input new "&lt;email&gt;" email<br>And I input new "&lt;password&gt;" password<br>And I click register  button<br>Then I will get "&lt;theresult&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="99860847deb003023d83eb40b00c3068c999cd06753b454c021ecb02a59cc727.png" title=" 1: Register new account ({name=, email=, password=, theresult=error message})" width="1295"/>
+                <img src="99860847deb003023d83eb40b00c3068c999cd06753b454c021ecb02a59cc727.png" title=" Given I am on home page" width="1295"/>
+                <img src="99860847deb003023d83eb40b00c3068c999cd06753b454c021ecb02a59cc727.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="e9238d93875a87e35c7003446d9661dba3d3de1b6773a339b7b0d2d6d82338ca.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="e9238d93875a87e35c7003446d9661dba3d3de1b6773a339b7b0d2d6d82338ca.png" title=" And I click register text" width="1295"/>
+                <img src="73f21cab7ed09e71c695ffe5b3d75dc28da68816915a3a2a183d0c6b0d050f36.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="73f21cab7ed09e71c695ffe5b3d75dc28da68816915a3a2a183d0c6b0d050f36.png" title=" When I input &quot;&quot; name" width="1295"/>
+                <img src="340ba0cf283653092ffd1464afd97712a4db2802409b7686464b15e712ac3b1f.png" title=" When I input &quot;&quot; name (completed)" width="1295"/>
+                <img src="340ba0cf283653092ffd1464afd97712a4db2802409b7686464b15e712ac3b1f.png" title=" And I input new &quot;&quot; email" width="1295"/>
+                <img src="18dcc51db3a7d6d95e9625b8b2050b29b19c4b858db457f76fb85cb6c4fbb6a5.png" title=" And I input new &quot;&quot; email (completed)" width="1295"/>
+                <img src="18dcc51db3a7d6d95e9625b8b2050b29b19c4b858db457f76fb85cb6c4fbb6a5.png" title=" And I input new &quot;&quot; password" width="1295"/>
+                <img src="599e0083a5e70c536fe616b6127069d102f7b64aeeed2f0da1eff36f88939e6d.png" title=" And I input new &quot;&quot; password (completed)" width="1295"/>
+                <img src="599e0083a5e70c536fe616b6127069d102f7b64aeeed2f0da1eff36f88939e6d.png" title=" And I click register  button" width="1295"/>
+                <img src="bd40be02397842b438025a3e63aaf62c08ebd287caf70edfa452bf6f3c05c46e.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="bd40be02397842b438025a3e63aaf62c08ebd287caf70edfa452bf6f3c05c46e.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="2299216994ce8d607987e6c92094f30bd0f541cb7cf49bd8df3d073f0a154365.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="2299216994ce8d607987e6c92094f30bd0f541cb7cf49bd8df3d073f0a154365.png" title=" 1: Register new account ({name=, email=, password=, theresult=error message}) (completed)" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" 2: Register new account ({name=ronasarigl, email=, password=, theresult=error message})" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" Given I am on home page" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="64f2c2ba19c2d717986f269f7b35be700ea4264d2c1e8eaedb90a8380058072d.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="64f2c2ba19c2d717986f269f7b35be700ea4264d2c1e8eaedb90a8380058072d.png" title=" And I click register text" width="1295"/>
+                <img src="18d1654a1afe3dbd9842b03b1332710e7512c6fa84473bb62a4b079b048b5096.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="18d1654a1afe3dbd9842b03b1332710e7512c6fa84473bb62a4b079b048b5096.png" title=" When I input &quot;ronasarigl&quot; name" width="1295"/>
+                <img src="e549a2abe3d8e860abb67b3dd7cbb162fd4270f454d8c06511a6d4a5c502afa8.png" title=" When I input &quot;ronasarigl&quot; name (completed)" width="1295"/>
+                <img src="e549a2abe3d8e860abb67b3dd7cbb162fd4270f454d8c06511a6d4a5c502afa8.png" title=" And I input new &quot;&quot; email" width="1295"/>
+                <img src="d0163d3c26ecf63fea5a1799be2525d5b24a7e561e23cdeedd249a12073095c9.png" title=" And I input new &quot;&quot; email (completed)" width="1295"/>
+                <img src="d0163d3c26ecf63fea5a1799be2525d5b24a7e561e23cdeedd249a12073095c9.png" title=" And I input new &quot;&quot; password" width="1295"/>
+                <img src="120576248cf185d88405f1e58c118b85890762b0eedbbdd2d1dd044bbdddd3bb.png" title=" And I input new &quot;&quot; password (completed)" width="1295"/>
+                <img src="120576248cf185d88405f1e58c118b85890762b0eedbbdd2d1dd044bbdddd3bb.png" title=" And I click register  button" width="1295"/>
+                <img src="ed26d51c68d75c93234fa8de60d4356c427e6eebd441d17db9583c96e211e1ee.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="ed26d51c68d75c93234fa8de60d4356c427e6eebd441d17db9583c96e211e1ee.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="6173550ad1d4eaad0394951543eeb08008ac816f39a70fd3164902b2af4e3145.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="6173550ad1d4eaad0394951543eeb08008ac816f39a70fd3164902b2af4e3145.png" title=" 2: Register new account ({name=ronasarigl, email=, password=, theresult=error message}) (completed)" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" 3: Register new account ({name=, email=ronasari@gmail.com, password=, theresult=error message})" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" Given I am on home page" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="c61af5ba7f2029e6228a1039a0e6f8e7b7923cba7f8141e9fadcf00ca1ff9e46.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="c61af5ba7f2029e6228a1039a0e6f8e7b7923cba7f8141e9fadcf00ca1ff9e46.png" title=" And I click register text" width="1295"/>
+                <img src="b32fafb446aa369b402c90d4eb6d05ac639bbf732cf76080ce8464f92141a2eb.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="b32fafb446aa369b402c90d4eb6d05ac639bbf732cf76080ce8464f92141a2eb.png" title=" When I input &quot;&quot; name" width="1295"/>
+                <img src="d8be70998efd67727973413abbf45c2a752b0b9f09e8a2291a17064a5b626680.png" title=" When I input &quot;&quot; name (completed)" width="1295"/>
+                <img src="d8be70998efd67727973413abbf45c2a752b0b9f09e8a2291a17064a5b626680.png" title=" And I input new &quot;ronasari@gmail.com&quot; email" width="1295"/>
+                <img src="1471d2e567673479b6fd0819a1bf4059093d54fb1c2b24563c916f06469c5778.png" title=" And I input new &quot;ronasari@gmail.com&quot; email (completed)" width="1295"/>
+                <img src="1471d2e567673479b6fd0819a1bf4059093d54fb1c2b24563c916f06469c5778.png" title=" And I input new &quot;&quot; password" width="1295"/>
+                <img src="99ff6cbfab60a16f0ae16317e6a20540ed84691da66dd2dbb633389edfe2a29d.png" title=" And I input new &quot;&quot; password (completed)" width="1295"/>
+                <img src="99ff6cbfab60a16f0ae16317e6a20540ed84691da66dd2dbb633389edfe2a29d.png" title=" And I click register  button" width="1295"/>
+                <img src="c0a1ce31477e3e7b2ea97226079ca2a8fab1023f6d6acba456a74c05153e9a1d.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="c0a1ce31477e3e7b2ea97226079ca2a8fab1023f6d6acba456a74c05153e9a1d.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="42327d23d54ad376aa2b20880e2c8a008c5a0e05eac13bca40b1f7e61e763661.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="42327d23d54ad376aa2b20880e2c8a008c5a0e05eac13bca40b1f7e61e763661.png" title=" 3: Register new account ({name=, email=ronasari@gmail.com, password=, theresult=error message}) (completed)" width="1295"/>
+                <img src="2e5194f640efdaf8b8404190eb258bec9ecd87b1dec1b4d4d76b65fd9887a201.png" title=" 4: Register new account ({name=, email=, password=novtami, theresult=error message})" width="1295"/>
+                <img src="2e5194f640efdaf8b8404190eb258bec9ecd87b1dec1b4d4d76b65fd9887a201.png" title=" Given I am on home page" width="1295"/>
+                <img src="2e5194f640efdaf8b8404190eb258bec9ecd87b1dec1b4d4d76b65fd9887a201.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="3b63ef78b663b72c5874ec3882d4ae1ee1a6e6c21306b75a9a0512cc00d82499.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="3b63ef78b663b72c5874ec3882d4ae1ee1a6e6c21306b75a9a0512cc00d82499.png" title=" And I click register text" width="1295"/>
+                <img src="15472f5b94fd5c012548f53aac9c4b115b8049923d9a9d61f67b7167694ef3ed.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="15472f5b94fd5c012548f53aac9c4b115b8049923d9a9d61f67b7167694ef3ed.png" title=" When I input &quot;&quot; name" width="1295"/>
+                <img src="53c7bd5882a131d695be4a966c1227bc5dbb82cd4bf0ee55bac4cb622a1c9d31.png" title=" When I input &quot;&quot; name (completed)" width="1295"/>
+                <img src="53c7bd5882a131d695be4a966c1227bc5dbb82cd4bf0ee55bac4cb622a1c9d31.png" title=" And I input new &quot;&quot; email" width="1295"/>
+                <img src="9a40ac7921c2fb3afac37ee065a65251a341f05996ace8ca6173e8ab3d3610c6.png" title=" And I input new &quot;&quot; email (completed)" width="1295"/>
+                <img src="9a40ac7921c2fb3afac37ee065a65251a341f05996ace8ca6173e8ab3d3610c6.png" title=" And I input new &quot;novtami&quot; password" width="1295"/>
+                <img src="263737151899a284481a8331892fd60752b6229dc5218bf0f3c032fa41daa05f.png" title=" And I input new &quot;novtami&quot; password (completed)" width="1295"/>
+                <img src="263737151899a284481a8331892fd60752b6229dc5218bf0f3c032fa41daa05f.png" title=" And I click register  button" width="1295"/>
+                <img src="8d76b4b2642873e0c9b511a9e7f0e1c0b48c0ae7c8689f506a6f5d56798280aa.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="8d76b4b2642873e0c9b511a9e7f0e1c0b48c0ae7c8689f506a6f5d56798280aa.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="55cbef74e4a9fb78ef8ac39b1b48182d7109bc4770d611c195aad28a16c7e76a.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="55cbef74e4a9fb78ef8ac39b1b48182d7109bc4770d611c195aad28a16c7e76a.png" title=" 4: Register new account ({name=, email=, password=novtami, theresult=error message}) (completed)" width="1295"/>
+                <img src="cc3fe2f208a671fc30c8bd6b7a9049100e6982dc33d64c92cc628edfe99ebfa3.png" title=" 5: Register new account ({name=ronasarigl, email=ronasari@gmail.com, password=, theresult=error message})" width="1295"/>
+                <img src="cc3fe2f208a671fc30c8bd6b7a9049100e6982dc33d64c92cc628edfe99ebfa3.png" title=" Given I am on home page" width="1295"/>
+                <img src="cc3fe2f208a671fc30c8bd6b7a9049100e6982dc33d64c92cc628edfe99ebfa3.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="bc3ba59a1ca4cf7be8082a7d0251101e792a92cbde90c02def4bfcf89b560050.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="bc3ba59a1ca4cf7be8082a7d0251101e792a92cbde90c02def4bfcf89b560050.png" title=" And I click register text" width="1295"/>
+                <img src="4f28352c78a501e6167bb903dd55512d3bce599a62d12982d7ed619ace5a309a.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="4f28352c78a501e6167bb903dd55512d3bce599a62d12982d7ed619ace5a309a.png" title=" When I input &quot;ronasarigl&quot; name" width="1295"/>
+                <img src="0a508fa52b0b6652d0759115f224a0fcdf933f76416aa8c8db8455804d2e6cae.png" title=" When I input &quot;ronasarigl&quot; name (completed)" width="1295"/>
+                <img src="0a508fa52b0b6652d0759115f224a0fcdf933f76416aa8c8db8455804d2e6cae.png" title=" And I input new &quot;ronasari@gmail.com&quot; email" width="1295"/>
+                <img src="65f04b95be21eedd9fc40302534561f70d6065a11c32a35c3d99b425d5e9d05e.png" title=" And I input new &quot;ronasari@gmail.com&quot; email (completed)" width="1295"/>
+                <img src="65f04b95be21eedd9fc40302534561f70d6065a11c32a35c3d99b425d5e9d05e.png" title=" And I input new &quot;&quot; password" width="1295"/>
+                <img src="ed5417185fccd86dcdd6275fae78aa384e1de76ebc381658abb243872c95a07c.png" title=" And I input new &quot;&quot; password (completed)" width="1295"/>
+                <img src="ed5417185fccd86dcdd6275fae78aa384e1de76ebc381658abb243872c95a07c.png" title=" And I click register  button" width="1295"/>
+                <img src="a8cc86f5bf34cff7888c0d406f3cf9436ba83e0f8d90a346bae196313b688c82.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="a8cc86f5bf34cff7888c0d406f3cf9436ba83e0f8d90a346bae196313b688c82.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="bde7e0195fa5b6770266a448827e9c3e5174b3ba7dc9a00191e427223f716bce.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="bde7e0195fa5b6770266a448827e9c3e5174b3ba7dc9a00191e427223f716bce.png" title=" 5: Register new account ({name=ronasarigl, email=ronasari@gmail.com, password=, theresult=error message}) (completed)" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" 6: Register new account ({name=, email=ronasari@gmail.com, password=novtami, theresult=error message})" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" Given I am on home page" width="1295"/>
+                <img src="37854abee517b8c39026b8cb652e548193a3fdd0584318b2dfac2d8cc2c1d0d9.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="3b63ef78b663b72c5874ec3882d4ae1ee1a6e6c21306b75a9a0512cc00d82499.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="3b63ef78b663b72c5874ec3882d4ae1ee1a6e6c21306b75a9a0512cc00d82499.png" title=" And I click register text" width="1295"/>
+                <img src="c846c67f5d19effac98355bb00b67feaab393f8df52f0211525ecd6855d1875b.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="c846c67f5d19effac98355bb00b67feaab393f8df52f0211525ecd6855d1875b.png" title=" When I input &quot;&quot; name" width="1295"/>
+                <img src="2bacbfd8b410343e44f6e4ccfa6bb543c5da91e512043b4259c54e17e7982d4e.png" title=" When I input &quot;&quot; name (completed)" width="1295"/>
+                <img src="2bacbfd8b410343e44f6e4ccfa6bb543c5da91e512043b4259c54e17e7982d4e.png" title=" And I input new &quot;ronasari@gmail.com&quot; email" width="1295"/>
+                <img src="15b8ce2227ebe35afb866acd9b3f8b8d5ea76f1bd596e7dd9fcd4b84f986b101.png" title=" And I input new &quot;ronasari@gmail.com&quot; email (completed)" width="1295"/>
+                <img src="15b8ce2227ebe35afb866acd9b3f8b8d5ea76f1bd596e7dd9fcd4b84f986b101.png" title=" And I input new &quot;novtami&quot; password" width="1295"/>
+                <img src="ed6403dec1d0f5cb7a37a8e771363b169d4f099330ca0fba68d0aadd8064c94e.png" title=" And I input new &quot;novtami&quot; password (completed)" width="1295"/>
+                <img src="ed6403dec1d0f5cb7a37a8e771363b169d4f099330ca0fba68d0aadd8064c94e.png" title=" And I click register  button" width="1295"/>
+                <img src="f88530167d0fe7673370d77a6bf6c816fdb0715a9058d9acf4c7ec81f755b2fd.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="f88530167d0fe7673370d77a6bf6c816fdb0715a9058d9acf4c7ec81f755b2fd.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="2ba67eb44baaf3db60166edfdfe714de40eef08bf3120c65636c257f3bb43a54.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="2ba67eb44baaf3db60166edfdfe714de40eef08bf3120c65636c257f3bb43a54.png" title=" 6: Register new account ({name=, email=ronasari@gmail.com, password=novtami, theresult=error message}) (completed)" width="1295"/>
+                <img src="e52d4dd475710fa7616deb931780ec1a7271f9d54cf40c8e2c94433b00808149.png" title=" 7: Register new account ({name=ronasarigl, email=, password=novtami, theresult=error message})" width="1295"/>
+                <img src="e52d4dd475710fa7616deb931780ec1a7271f9d54cf40c8e2c94433b00808149.png" title=" Given I am on home page" width="1295"/>
+                <img src="e52d4dd475710fa7616deb931780ec1a7271f9d54cf40c8e2c94433b00808149.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="96ea332ecca5544b592cbb2849696779500bc18c7b2ff65b576fe75a1648e9b1.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="96ea332ecca5544b592cbb2849696779500bc18c7b2ff65b576fe75a1648e9b1.png" title=" And I click register text" width="1295"/>
+                <img src="978a079370e618fa6fdb269cd8b5f2e4e6c482496f81b7ff340dd8e50f07a7fd.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="978a079370e618fa6fdb269cd8b5f2e4e6c482496f81b7ff340dd8e50f07a7fd.png" title=" When I input &quot;ronasarigl&quot; name" width="1295"/>
+                <img src="b0e861d52c94f0db7d17f57f74f9865e9d48fa5bf5e69ec25228a3d7cbb7ef42.png" title=" When I input &quot;ronasarigl&quot; name (completed)" width="1295"/>
+                <img src="b0e861d52c94f0db7d17f57f74f9865e9d48fa5bf5e69ec25228a3d7cbb7ef42.png" title=" And I input new &quot;&quot; email" width="1295"/>
+                <img src="d242cc7312258a9a03eaa9f73a6cf3188bd5a333ad46b3fb9148757b2c1b41c3.png" title=" And I input new &quot;&quot; email (completed)" width="1295"/>
+                <img src="d242cc7312258a9a03eaa9f73a6cf3188bd5a333ad46b3fb9148757b2c1b41c3.png" title=" And I input new &quot;novtami&quot; password" width="1295"/>
+                <img src="3a6fce4a2af0505fdffe86cb36aa1e5b00aa66a21608919de13f7955fa081087.png" title=" And I input new &quot;novtami&quot; password (completed)" width="1295"/>
+                <img src="3a6fce4a2af0505fdffe86cb36aa1e5b00aa66a21608919de13f7955fa081087.png" title=" And I click register  button" width="1295"/>
+                <img src="14f53bf8ee8c2f72bbc9b7f534e5bf7413a18870f725afbf52dcd9b997fd77b6.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="14f53bf8ee8c2f72bbc9b7f534e5bf7413a18870f725afbf52dcd9b997fd77b6.png" title=" Then I will get &quot;error message&quot;" width="1295"/>
+                <img src="a5beada2578627034d781ddb51cf2b321d62baaa1e4bf98c91c63e2706ecca53.png" title=" Then I will get &quot;error message&quot; (completed)" width="1295"/>
+                <img src="a5beada2578627034d781ddb51cf2b321d62baaa1e4bf98c91c63e2706ecca53.png" title=" 7: Register new account ({name=ronasarigl, email=, password=novtami, theresult=error message}) (completed)" width="1295"/>
+                <img src="1e51a02c6385cc8502a6318b912f3fb203bed77f2c0fe428df097764db1569be.png" title=" 8: Register new account ({name=ronasarigl, email=ronasarigl@gmail.com, password=novtami, theresult=successfull registration})" width="1295"/>
+                <img src="1e51a02c6385cc8502a6318b912f3fb203bed77f2c0fe428df097764db1569be.png" title=" Given I am on home page" width="1295"/>
+                <img src="1e51a02c6385cc8502a6318b912f3fb203bed77f2c0fe428df097764db1569be.png" title=" And I click icon the login icon" width="1295"/>
+                <img src="65fc40aa19319b8aed4e813e479ad356b3af4a450821014154d77d6ce44c7f68.png" title=" And I click icon the login icon (completed)" width="1295"/>
+                <img src="65fc40aa19319b8aed4e813e479ad356b3af4a450821014154d77d6ce44c7f68.png" title=" And I click register text" width="1295"/>
+                <img src="b3e58bd2a4368632cf0dfb3d14c7e271e174c444a3c7da3d04a3c7947dde2930.png" title=" And I click register text (completed)" width="1295"/>
+                <img src="b3e58bd2a4368632cf0dfb3d14c7e271e174c444a3c7da3d04a3c7947dde2930.png" title=" When I input &quot;ronasarigl&quot; name" width="1295"/>
+                <img src="87bd05bdadd17fd1de4fc9134ae4f8034230737fa7ff454c18ea0bb294bb60c5.png" title=" When I input &quot;ronasarigl&quot; name (completed)" width="1295"/>
+                <img src="87bd05bdadd17fd1de4fc9134ae4f8034230737fa7ff454c18ea0bb294bb60c5.png" title=" And I input new &quot;ronasarigl@gmail.com&quot; email" width="1295"/>
+                <img src="ef99f843eebbceac9200cf24543a20cf9e40b4c6c3df3f30b1cb110549048e30.png" title=" And I input new &quot;ronasarigl@gmail.com&quot; email (completed)" width="1295"/>
+                <img src="ef99f843eebbceac9200cf24543a20cf9e40b4c6c3df3f30b1cb110549048e30.png" title=" And I input new &quot;novtami&quot; password" width="1295"/>
+                <img src="ea6d035f74a9a7f160a722549e06de6d0fae44df0023f1fdfb9b18ca2fd906f2.png" title=" And I input new &quot;novtami&quot; password (completed)" width="1295"/>
+                <img src="ea6d035f74a9a7f160a722549e06de6d0fae44df0023f1fdfb9b18ca2fd906f2.png" title=" And I click register  button" width="1295"/>
+                <img src="db4862390fcd38ee8e3089805b45f09e93db1069bac72471bd4e5185fd7482fb.png" title=" And I click register  button (completed)" width="1295"/>
+                <img src="db4862390fcd38ee8e3089805b45f09e93db1069bac72471bd4e5185fd7482fb.png" title=" Then I will get &quot;successfull registration&quot;" width="1295"/>
+                <img src="db4862390fcd38ee8e3089805b45f09e93db1069bac72471bd4e5185fd7482fb.png" title=" Then I will get &quot;successfull registration&quot; (completed)" width="1295"/>
+                <img src="db4862390fcd38ee8e3089805b45f09e93db1069bac72471bd4e5185fd7482fb.png" title=" 8: Register new account ({name=ronasarigl, email=ronasarigl@gmail.com, password=novtami, theresult=successfull registration}) (completed): <span class='success-color'>SUCCESS</span>" width="1295"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.1</span>
+</div>
+</body>
+</html>
